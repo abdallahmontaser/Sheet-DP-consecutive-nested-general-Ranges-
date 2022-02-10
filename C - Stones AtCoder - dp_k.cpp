@@ -35,7 +35,7 @@ void solve()
 	clr(dp, -1);
 	for (auto& it : ve) cin >> it;
 	sort(all(ve));
-	if (sol(K, 0) == 1)	
+	if (sol(K, 0))	
 		cout << "First";
 	else
 		cout << "Second";
