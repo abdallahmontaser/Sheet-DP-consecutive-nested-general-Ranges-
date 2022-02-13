@@ -1,9 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef vector<int> vi;
-typedef vector<ll> vl;
 #define all(x)                 x.begin(),x.end()
 #define clr(x,val)           memset((x),(val),sizeof(x))
 int N, cnt = 1;
@@ -40,7 +37,7 @@ void solve()
 	clr(dp, -1);
 	for (auto& it : ve) cin >> it.first >> it.second, st.insert(max(it.first, it.second));
 	for (auto it : st) comp[it] = cnt++;
-	vector < vector<pair<int, int>>>save(cnt);
+	vector < vector<pair<int, int>>>save(cnt + 2);
 	for (auto& it : ve)
 		save[comp[max(it.first, it.second)]].push_back(it);
 	save2.push_back({ {0,0}  ,{0,0} });
@@ -54,5 +51,5 @@ void solve()
 }
 int main()
 {
-		solve();
+	solve();
 }
